@@ -1,18 +1,14 @@
-import { type Post } from "@/types";
+import * as types from "@/types";
+import Post from "./Post";
 
 export default async function Home() {
-  const posts_response = await fetch(`${process.env.URL}/api/get_posts`);
-  const posts: Post[] = (await posts_response.json()).posts;
+  const posts: types.Post[] = (
+    await (await fetch(`${process.env.URL}/api/get_posts`)).json()
+  ).posts;
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <div>
-          <a href="/login">login</a>
-        </div>
-        <div>
-          <a href="/new_account">new_account</a>
-        </div>
         <div>
           <a href="/new_post">new_post</a>
         </div>
@@ -22,14 +18,6 @@ export default async function Home() {
           ))}
         </div>
       </main>
-    </div>
-  );
-}
-
-function Post(props: { post: Post }) {
-  return (
-    <div className="Post">
-      <pre>{JSON.stringify(props.post, null, 4)}</pre>
     </div>
   );
 }
