@@ -10,6 +10,8 @@ export type Post = {
   authorId: string;
   title: string;
   body: string;
+  likes: number;
+  dislikes: number;
   comments: PostComment[];
 };
 

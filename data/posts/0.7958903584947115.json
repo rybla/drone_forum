@@ -1,7 +1,1 @@
-{
-    "id": "0.7958903584947115",
-    "authorId": "henry",
-    "title": "Another test",
-    "body": "skjdadjaskdk",
-    "comments": []
-}
+{"id":"0.7958903584947115","authorId":"henry","title":"Another test","body":"skjdadjaskdk","comments":["asdasdsds","this is a test "],"likes":6,"dislikes":4}

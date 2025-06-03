@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Home {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+h1 {
+    padding: 0.5em;
+    background: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.Home .menu {
+    padding: 1em 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+.Home .menu a {
+    padding: 0.5em;
+    background: black;
+    color: white;
+}
+
+.Home .feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.PostPreview {
+    box-shadow: 0 0 0 0.1em black inset;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.PostPreview .title {
+    padding: 0.5em;
+    background: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.PostControls {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.PostComments {
 }

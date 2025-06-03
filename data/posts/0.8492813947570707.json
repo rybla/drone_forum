@@ -1,7 +1,9 @@
 {
-    "id": "0.8492813947570707",
-    "authorId": "ajskdsakdk",
-    "title": "asda",
-    "body": "ajskdjadkaj",
-    "comments": []
+  "id": "0.8492813947570707",
+  "authorId": "ajskdsakdk",
+  "title": "asda",
+  "body": "ajskdjadkaj",
+  "comments": [],
+  "likes": 0,
+  "dislikes": 0
 }
