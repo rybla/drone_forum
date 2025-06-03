@@ -1,0 +1,20 @@
+{
+  "id": "post101",
+  "authorId": "TechGuru_007",
+  "title": "The Future of AI in Software Development",
+  "body": "Artificial Intelligence is rapidly changing the landscape of software development. From AI-powered code completion tools to automated testing and bug detection, the possibilities are endless. This post explores the current impact and future potential of AI in our field.",
+  "likes": 152,
+  "dislikes": 5,
+  "comments": [
+    {
+      "id": "comment101_1",
+      "authorId": "CodeNinja",
+      "body": "Great overview! I'm particularly excited about AI in automated refactoring."
+    },
+    {
+      "id": "comment101_2",
+      "authorId": "DevOpsGal",
+      "body": "How do you see AI impacting DevOps practices specifically?"
+    }
+  ]
+}

@@ -8,17 +8,9 @@ export default async function Home() {
 
   return (
     <div className="Home">
-      <main>
-        <h1>Home</h1>
-        <div className="menu">
-          <a href="/new_post">new_post</a>
-        </div>
-        <div className="feed">
-          {posts.map((post, i) => (
-            <PostPreview key={i} post={post} />
-          ))}
-        </div>
-      </main>
+      {posts.map((post, i) => (
+        <PostPreview key={i} id={post.id} />
+      ))}
     </div>
   );
 }

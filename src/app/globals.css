@@ -20,66 +20,226 @@
 }
 
 body {
-    padding: 1em;
-
     background: var(--background);
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.Home {
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-}
-
-h1 {
-    padding: 0.5em;
-    background: blue;
+header {
+    padding: 1em;
+    background: black;
     color: white;
     font-weight: bold;
 }
 
-.Home .menu {
-    padding: 1em 0;
-
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    align-items: center;
+main {
 }
 
-.Home .menu a {
-    padding: 0.5em;
-    background: black;
-    color: white;
+footer {
 }
 
-.Home .feed {
+.Home {
+    padding: 1em;
+    width: 600px;
+    margin: auto;
+
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
 .PostPreview {
-    box-shadow: 0 0 0 0.1em black inset;
+    margin: auto;
 
-    display: flex;
-    flex-direction: column;
+    background-color: #ffffff; /* White background for the post */
+    border: 1px solid #d1d1d1; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space between posts */
+    padding: 20px;
+    max-width: 700px; /* Max width for readability */
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.PostPreview:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly more prominent shadow on hover */
 }
 
 .PostPreview .title {
-    padding: 0.5em;
-    background: blue;
-    color: white;
-    font-weight: bold;
+    display: block; /* Make it a block to take full width */
+    font-size: 1.75em; /* Larger font size for the title */
+    font-weight: 600;
+    color: #056be1; /* A modern blue for links/titles */
+    margin-bottom: 8px;
+    text-decoration: none; /* Remove underline from link */
+    transition: color 0.2s ease-in-out;
 }
 
-.PostControls {
+.PostPreview .title:hover {
+    color: #0456b3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+.PostPreview .authorId {
+    font-size: 0.9em;
+    color: #606770; /* Lighter text color for secondary info */
+    margin-bottom: 15px;
+}
+
+.PostPreview .authorId::before {
+    content: "Posted by: "; /* Add a label */
+    font-weight: 500;
+}
+
+.PostPreview .body {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333333; /* Main text color */
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Preserve whitespace and newlines */
+    word-wrap: break-word; /* Break long words */
+}
+
+.PostPreview .metadata {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 20px; /* Space between likes and dislikes */
+    font-size: 0.9em;
+    color: #606770;
+}
+
+.PostPreview .metadata div {
+    display: flex;
+    align-items: center;
+}
+
+.PostPreview .metadata .likes::before {
+    content: "👍"; /* Using emoji for icons */
+    margin-right: 6px;
+    font-size: 1.1em;
+}
+
+.PostPreview .metadata .dislikes::before {
+    content: "👎"; /* Using emoji for icons */
+    margin-right: 6px;
+    font-size: 1.1em;
+}
+
+.PostPage {
+    padding: 1em;
+    width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
     gap: 1em;
 }
 
-.PostComments {
+.Post {
+    margin: auto;
+
+    background-color: #ffffff; /* White background for the post */
+    border: 1px solid #d1d1d1; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space between posts */
+    padding: 20px;
+    max-width: 700px; /* Max width for readability */
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.Post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly more prominent shadow on hover */
+}
+
+.Post .title {
+    display: block; /* Make it a block to take full width */
+    font-size: 1.75em; /* Larger font size for the title */
+    font-weight: 600;
+    color: #056be1; /* A modern blue for links/titles */
+    margin-bottom: 8px;
+    text-decoration: none; /* Remove underline from link */
+    transition: color 0.2s ease-in-out;
+}
+
+.Post .title:hover {
+    color: #0456b3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+.Post .authorId {
+    font-size: 0.9em;
+    color: #606770; /* Lighter text color for secondary info */
+    margin-bottom: 15px;
+}
+
+.Post .authorId::before {
+    content: "Posted by: "; /* Add a label */
+    font-weight: 500;
+}
+
+.Post .body {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333333; /* Main text color */
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Preserve whitespace and newlines */
+    word-wrap: break-word; /* Break long words */
+}
+
+.Post .metadata {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between likes and dislikes */
+    font-size: 0.9em;
+    color: #606770;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e7e7e7; /* Separator line */
+}
+
+.Post .metadata div {
+    display: flex;
+    align-items: center;
+}
+
+.Post .metadata .likes::before {
+    content: "👍"; /* Using emoji for icons */
+    margin-right: 6px;
+    font-size: 1.1em;
+}
+
+.Post .metadata .dislikes::before {
+    content: "👎"; /* Using emoji for icons */
+    margin-right: 6px;
+    font-size: 1.1em;
+}
+
+.Post .comments {
+    margin-top: 10px;
+}
+
+.Post .comments h4 {
+    /* Optional: if you add a "Comments" heading */
+    font-size: 1.1em;
+    color: #1c1e21;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.Post .comment {
+    background-color: #f7f7f7; /* Slightly different background for comments */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #333;
+}
+
+.Post .comment:last-child {
+    margin-bottom: 0;
 }

@@ -1,10 +1,3 @@
-export type User = {
-  id: string;
-  name: string;
-  description: string;
-  roles: string[];
-};
-
 export type Post = {
   id: string;
   authorId: string;

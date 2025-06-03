@@ -1,0 +1,15 @@
+{
+  "id": "test1",
+  "authorId": "JaneBill",
+  "title": "Test Post",
+  "body": "This is a test post.",
+  "likes": 0,
+  "dislikes": 0,
+  "comments": [
+    {
+      "id": "comment1",
+      "authorId": "PollRod",
+      "body": "This is a test comment."
+    }
+  ]
+}

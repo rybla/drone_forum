@@ -1,0 +1,15 @@
+{
+  "id": "post202",
+  "authorId": "FoodieAdventures",
+  "title": "My Top 5 Restaurants in Downtown",
+  "body": "After much delicious research, I've compiled my list of the absolute best dining experiences downtown. From hidden gems to well-known staples, there's something here for every palate and occasion. Let me know if your favorite made the cut!",
+  "likes": 278,
+  "dislikes": 12,
+  "comments": [
+    {
+      "id": "comment202_1",
+      "authorId": "LocalEats",
+      "body": "Awesome list! I'd also recommend 'The Corner Bistro' for amazing brunch."
+    }
+  ]
+}

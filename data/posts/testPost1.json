@@ -1,9 +1,0 @@
-{
-  "id": "testPost1",
-  "authorId": "testUser1",
-  "title": "Test Post 1",
-  "body": "This is the body of the test post.",
-  "comments": [],
-  "likes": 0,
-  "dislikes": 0
-}
