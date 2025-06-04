@@ -79,9 +79,9 @@ Keep in mind the following important notes:
           )}
           {paragraph(
             <>
-              The following is the schema for the structured outputs. So, the AI
-              generation is able to configured all the settings of a{" "}
-              {inlinecode(<>Level</>)}.
+              The following is the <a href="https://zod.dev/">zod</a> schema for
+              the structured outputs. So, the AI generation is able to
+              configured all the settings of a {inlinecode(<>Level</>)}.
             </>,
           )}
           <div

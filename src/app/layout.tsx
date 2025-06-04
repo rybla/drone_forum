@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <header style={{ display: "flex", flexDirection: "row", gap: "1em" }}>
           <div>
-            <Link href="/">drone_forum</Link>
+            <Link href="/">pico forums</Link>
           </div>
           |
           <div>
