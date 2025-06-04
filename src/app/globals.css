@@ -238,6 +238,8 @@ footer {
     font-size: 0.95em;
     line-height: 1.5;
     color: #333;
+
+    white-space: pre-wrap;
 }
 
 .Post .comment:last-child {

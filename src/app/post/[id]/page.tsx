@@ -40,7 +40,8 @@ export default function Post(props: { params: Promise<{ id: string }> }) {
           <div className="comments">
             {post.comments.map((comment, i) => (
               <div key={i} className="comment">
-                {comment.body}
+                <div className="authorId">{comment.authorId}</div>
+                <div className="body">{comment.body}</div>
               </div>
             ))}
           </div>
