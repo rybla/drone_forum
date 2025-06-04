@@ -15,8 +15,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header>
-          <Link href="/">drone_forum</Link>
+        <header style={{ display: "flex", flexDirection: "row", gap: "1em" }}>
+          <div>
+            <Link href="/">drone_forum</Link>
+          </div>
+          |
+          <div>
+            <Link href="/">[ feed ]</Link>
+          </div>
+          <div>
+            <Link href="/prompt">[ generation ]</Link>
+          </div>
         </header>
         <main>{children}</main>
         <footer></footer>
